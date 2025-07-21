@@ -1,3 +1,69 @@
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(11, 61, 145, 0.85);
+  backdrop-filter: blur(2px);
+}
+.modal-content {
+  background: #1b263b;
+  margin: 5% auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border: 2px solid #FC3D21;
+  border-radius: 12px;
+  max-width: 500px;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 8px 40px #000b;
+}
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #FC3D21;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.modal-body h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #FC3D21;
+}
+.modal-body p {
+  margin-bottom: 1em;
+}
+
+/* Details button on card */
+.details-btn {
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  background: #FC3D21;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3em 0.8em;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 1px 4px #0002;
+  transition: background 0.2s, color 0.2s;
+}
+.details-btn:hover, .details-btn:focus {
+  background: #fff;
+  color: #FC3D21;
+  outline: 2px solid #FC3D21;
+}
 /* Global reset & box sizing */
 * {
   box-sizing: border-box;
@@ -121,6 +187,7 @@ body {
   flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   border: 2px solid #FC3D21;
+  position: relative;
 }
 
 .card:hover,
